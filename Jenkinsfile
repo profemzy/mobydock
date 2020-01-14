@@ -12,7 +12,6 @@ pipeline {
             steps {
                 script {
                     app = docker.build(DOCKER_IMAGE_NAME)
-                    sh "docker-compose build"
                     app.inside {
                         sh 'echo "Test" '
                     }
